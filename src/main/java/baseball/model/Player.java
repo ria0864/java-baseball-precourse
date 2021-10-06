@@ -93,12 +93,12 @@ public class Player {
  }
 
  private boolean checkNumberSize(String userInput) {
-  Set<String> set = new HashSet<>(Arrays.asList(userInput.split("")));
-  return userInput.length() == set.size();
+  List<String> list = new ArrayList<>(Arrays.asList(userInput.split("")));
+  return list.size() == NUMBER_SIZE;
  }
 
  private boolean checkDuplicateNumber(String userInput) {
   Set<String> set = new HashSet<>(Arrays.asList(userInput.split("")));
-  return set.size() == NUMBER_SIZE;
+  return userInput.length() == set.size();
  }
 }
